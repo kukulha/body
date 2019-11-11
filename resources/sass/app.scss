@@ -1,0 +1,233 @@
+//////
+//
+// General Styles
+//
+///////
+
+@import '~normalize.css/normalize';
+@import '~materialize-css/dist/css/materialize.min';
+@import '~lightbox2/dist/css/lightbox.min';
+
+html{
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+body.app{
+	background: #000;
+	overflow-x: hidden;
+}
+
+//////
+//
+// Typography
+//
+///////
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600,900&display=swap');
+
+.title{
+	text-transform: uppercase;
+}
+.justify{
+	text-align: justify;
+}
+.bold{
+	font-weight: 900 !important;
+}
+.light{
+	font-weight: 300 !important;
+}
+.small{
+	font-size: .8rem;
+}
+
+//////
+//
+// Colors
+//
+///////
+
+.amarillo{
+	background: #FAD92C;
+}
+.amarillo-text{
+	color: #FAD92C;
+}
+
+//////
+//
+// Backgrounds
+//
+///////
+
+.servicios{
+	background:url('/img/services.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 60vh;
+	width: 100vw;
+}
+.instructores{
+	background:url('/img/instructors.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 60vh;
+	width: 100vw;
+}
+.horarios{
+	background:url('/img/hours.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 60vh;
+	width: 100vw;
+}
+.clases{
+	background:url('/img/clases.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 60vh;
+	width: 100vw;
+}
+.promociones{
+	background:url('/img/promociones.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: 60vh;
+	width: 100vw;
+}
+
+//////
+//
+// Helpers
+//
+///////
+
+.brand-logo{
+	margin-top: 5px;
+}
+nav#main-menu ul li a:hover, .rs:hover{
+	color: #FAD92C;
+	cursor: pointer;
+}
+.slider{
+	margin-top: -64px;
+}
+.footer{
+	background: url('/img/footer.png') no-repeat top center;
+	background-size: cover;
+	background-attachment: cover;
+	height: auto;
+	width: 100vw;
+	overflow-y:hidden;
+}
+.btn:hover{
+	background: #FAD92C;
+}
+.slh{
+	line-height: 23px;
+}
+.valign-wrapper{
+	height: 60vh;
+}
+.icon{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+}
+.icon i{
+	margin: auto auto;
+}
+.select-dropdown.dropdown-content li.selected {
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+.body{
+	color: #ffffff !important;
+}
+.blog{
+	height: 600px;
+	max-height: 600px;
+}
+//////
+//
+// Tabs Styles
+//
+///////
+
+.tabs .tab a {
+  color: #000;
+  background-color: #FAD92C;
+}
+
+.tabs .tab a:hover {
+  color: #000;
+  background-color: white;
+}
+
+.tabs .tab a.active {
+    background-color:#fff;
+    color:#000;
+}
+
+.tabs .indicator {
+  background-color: #FAD92C;
+}
+
+//////
+//
+// Form Styles
+//
+///////
+
+//Underline label color
+.input-field input[type=text]:focus, 
+.input-field input[type=email]:focus, 
+.input-field input[type=tel]:focus, 
+.input-field input[type=password]:focus{
+ 	border-bottom: 1px solid #FAD92C !important;
+ 	box-shadow: 0 1px 0 0 #FAD92C !important;
+}
+
+.input-field .invalid input[type=text]:focus{
+	border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important;
+}
+//Datepicker styles
+.datepicker-date-display{
+	background: #FAD92C !important;
+	color: #000;
+}
+.timepicker-digital-display{
+	background: #FAD92C !important;
+	color: #000;
+}
+.timepicker-display-column, 
+.timepicker-span-hours, 
+.timepicker-span-minutes, 
+.am-btn,
+.pm-btn,
+.year-text{
+	color: #000 !important;
+}
+.text-primary{
+	font-weight: 900 !important;
+}
+.is-today{
+	color: #FAD92C !important;
+	font-weight: 800 !important;
+}
+.is-selected {
+	background: #FAD92C !important;
+	color: #000 !important;
+}
+.is-today.is-selected{
+	background: #FAD92C !important;
+	color: #000 !important;
+}
+.datepicker-cancel{
+	color: #000 !important;
+}
+.datepicker-done{
+	color: #000 !important;
+}
