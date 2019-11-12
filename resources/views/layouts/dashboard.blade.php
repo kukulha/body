@@ -25,13 +25,18 @@
         <nav class="black">
             <div class="nav-wrapper container">
                 <a href="{{ route('home') }}" class="brand-logo"><img src="/img/logo.png" width="180px" alt=""></a>
-                <a href="" class="sidenav-trigger" data-target="movil"><i class="material-icons">menu</i></a>
+                <a href="" class="sidenav-trigger" data-target="movild"><i class="material-icons">menu</i></a>
                 <ul class="hide-on-med-and-down right">
                     <li><a href="{{ route('home') }}">Ver Página</a></li>
                     <li><a class='dropdown-trigger' href='#' data-target='articulos'>Articulos <i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a class='dropdown-trigger' href='#' data-target='clases'>Clases <i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a class='dropdown-trigger' href='#' data-target='pagina'>Pagina <i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a href="{{ route('messages.index') }}">Mensajes</a></li>
+                    <li >
+                        {{ Form::open(['route' => 'logout']) }}
+                            {{ Form::submit('Cerrar Sesión', ['class' => 'btn red']) }}
+                        {{ Form::close() }}
+                    </li>
 
                 </ul>
             </div>
@@ -56,7 +61,20 @@
         <li><a href="{{ route('instructors.index') }}" class="white-text">Instructores</a></li>
     </ul>
 
-    @include('partials.movil')
+    <ul class="sidenav yellow" id="movild">
+        <li><a href="{{ route('categories.index') }}" class="bold title">Categorias</a></li>
+        <li><a href="{{ route('posts.index') }}" class="bold title">Articulos</a></li>
+        <li><a href="{{ route('types.index') }}" class="bold title">Tipo de clase</a></li>
+        <li><a href="{{ route('lessons.index') }}" class="bold title">Horarios</a></li>
+        <li><a href="{{ route('promotions.index') }}" class="bold title">Promociones</a></li>
+        <li><a href="{{ route('instructors.index') }}" class="bold title">Instructores</a></li>
+        <li><a href="{{ route('messages.index') }}" class="bold title">Mensajes</a></li>
+        <li class="center">
+            {{ Form::open(['route' => 'logout']) }}
+                {{ Form::submit('Cerrar Sesión', ['class' => 'btn red']) }}
+            {{ Form::close() }}
+        </li>
+    </ul>
 
     @if(session('info'))
             <div class="container section center">

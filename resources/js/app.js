@@ -13,7 +13,8 @@ $(document).ready(function(){
 	$('.sidenav').sidenav();
 	$('.dropdown-trigger').dropdown({
 		coverTrigger: false,
-		hover: true
+		hover: true,
+		constrainWidth:false
 	});
 	$('.slider').slider({
 		height: $(window).height(),

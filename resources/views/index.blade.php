@@ -16,14 +16,14 @@
                 <img src="/img/hero2.jpg">
                 <div class="caption left-align">
                     <h2 class="amarillo-text title bold">¡Rendirse</h3>
-                    <h5 class="white-text bold title">esta prohibido!</h5>
+                    <h5 class="white-text bold title">está prohibido!</h5>
                     <a href="#instructores" class="btn amarillo black-text">Instructores</a>
                 </div>
             </li>
             <li>
                 <img src="/img/hero3.jpg" alt="">
                 <div class="caption center-align">
-                    <h2 class="white-text title bold">"La <span class="amarillo-text">fuerza</span> <br>esta en ti"</h3>
+                    <h2 class="white-text title bold">"La <span class="amarillo-text">fuerza</span> <br>está en ti"</h3>
                 </div>
             </li>
         </ul>
