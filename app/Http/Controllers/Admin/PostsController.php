@@ -32,7 +32,7 @@ class PostsController extends Controller
      */
     public function create()
     {   
-        $tags = [];
+        $tags = '';
         $categories = Category::orderBy('name', 'DESC')->pluck('name', 'id');
         return view('admin.posts.create', compact('categories', 'tags'));
     }
@@ -45,6 +45,7 @@ class PostsController extends Controller
      */
     public function store(PostStoreRequest $request)
     {
+        $tags = explode(',', $request->tags);
 
         $post = Post::create(request()->all());
 
@@ -66,7 +67,7 @@ class PostsController extends Controller
         }
 
         //Guardar etiquetas
-        $post->syncTags($request->tags);
+        $post->tag($tags);
 
 
         return redirect()->route('posts.index')->with('info', 'Articulo creado correctamente');
@@ -94,6 +95,7 @@ class PostsController extends Controller
      */
     public function update(PostUpdateRequest $request, Post $post)
     {
+        $tags = explode(',', $request->tags);
         $post->update(request()->all());
 
         if (request()->hasFile('file')) {
@@ -114,8 +116,7 @@ class PostsController extends Controller
         }
 
         //Guardar etiquetas
-        $post->tags = [];
-        $post->syncTags($request->tags);
+        $post->retag($tags);
 
         return redirect()->route('posts.index')->with('info', 'Articulo editado correctamente');
     }

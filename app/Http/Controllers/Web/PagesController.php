@@ -60,6 +60,7 @@ class PagesController extends Controller
             ->where('id', '!=', $post->id)
             ->paginate(3);
     	$tags = $post->tags->pluck('name');
+
     	return view('web.post', compact('post', 'related', 'tags'));
     }
 

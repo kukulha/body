@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use \Spatie\Tags\HasTags;
+    use \Conner\Tagging\Taggable;
 
     protected $fillable = [
     	'user_id', 'category_id', 'name', 'slug', 'excerpt', 'body', 'file', 'featured'

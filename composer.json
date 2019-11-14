@@ -14,6 +14,7 @@
         "laravel/tinker": "^1.0",
         "laravel/ui": "^1.1",
         "laravelcollective/html": "^6.0",
+        "rtconner/laravel-tagging": "^3.2",
         "spatie/laravel-tags": "^2.5"
     },
     "require-dev": {

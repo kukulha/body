@@ -24,9 +24,9 @@
 		<div class="input-field">
 			{{ Form::label('tags','Tags') }}
 			@if($tags)
-				{{ Form::text('tags[]', $tags, ['data-role' => 'materialtags']) }}
+				{{ Form::text('tags', $tags, ['data-role' => 'materialtags']) }}
 			@else
-				{{ Form::text('tags[]', null , ['data-role' => 'materialtags']) }}
+				{{ Form::text('tags', null , ['data-role' => 'materialtags']) }}
 			@endif
 		</div>
 
