@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- GOOGLE SEO -->    
+    <meta name="robots" content="index,follow" />
+    <meta name="geo.region" content="MX" />
 
-    <!-- CSRF Token -->
+    <!--SEO Organico -->  
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    @yield('seo')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

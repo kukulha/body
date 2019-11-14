@@ -1,4 +1,61 @@
 @extends('layouts.app')
+@section('title', 'Rendirse está prohibido')
+
+@section('seo')
+    <meta name="keywords" content="@foreach($post->tags as $tag) {{ $tag->name }}, @endforeach">
+    <meta name="description" content="{{ $post->excerpt }}">
+    <meta name="author" content="Kukulha.com">
+    <meta name="designer" content="Kukulha.com">
+
+    <!--SEO Facebook -->    
+    <meta property="og:title" content="{{ $post->name }}">
+    <meta property="og:description" content="{{ $post->excerpt }}">
+    <meta property="fb:app_id" content=""/>  
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://.com.mx/">
+    <meta property="og:image" content="http://.com.mx/khms.png">
+    <meta property=og:locale content="es_MX">
+
+    <!--SEO Twitter -->    
+    <meta property=twitter:card content="summary">
+    <meta property=twitter:title content="{{ $post->name }}">
+    <meta property=twitter:description content="{{ $post->excerpt }}">
+    <meta property=twitter:creator content="@">
+    <meta property=twitter:url content="http://gymbodyfactory.com.mx">
+    <meta property=twitter:image content="">
+
+    <!--Schema.org --> 
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Article",
+            "name": "{{ $post->name }}",
+            "headline": "{{ $post->name }}",
+            "url": "http://www.gymbodyfactory/articulos/{{ $post->slug }}",
+            "image": "http://gymbodyfactory{{ Storage::url($post->file) }}",
+            "description" : "{{ $post->excerpt }}",
+            "keywords" : "@foreach($post->tags as $tag) {{ $tag->name }}, @endforeach",
+            "author": {
+                "@type": "Person",
+                "name" : "{{ $post->user->name }}"
+            },
+            "datePublished": "{{ $post->created_at }}",
+            "dateModified": "{{ $post->updated_at }}",
+            "publisher": {
+                "@type": "Organization",
+                "name" : "Body Factory",
+                "logo": {
+                    "@type": "imageObject",
+                    "url": "http://www.gymbodyfactory.com/img/logo.png"
+                }
+            },
+            "mainEntityOfPage" : {
+                "@type": "WebPage",
+                "@id": "http://www.gymbodyfactory.com"
+            }
+        }
+    </script> 
+@endsection
 
 @section('content')
 <header>

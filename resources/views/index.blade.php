@@ -1,5 +1,49 @@
 @extends('layouts.app')
 
+@section('title', 'Rendirse está prohibido')
+
+@section('seo')
+    <meta name="keywords" content="gimnasios en tepatitlan,gimnasios en tepatitlán,gym en tepatitlan,gimnasios cerca de mi,gimnasio con guarderia,gimnasio cerca de mi,gimnasio abierto hoy,instructores de gym,instructores de yoga,instructores certificados,instructores de gimnasio,ejercicios para pecho,ejercicios para espalda,ejercicio de calentamiento,ejercicio fisico,ejercicio para pecho,ejercicio para abdomen,ejercicio para gluteos,ejercicio para brazos,ejercicio abdomen,ejercicio bicicleta,ejercicio brazos,ejercicio bajo impacto,ejercicio con mancuernas,ejercicio cardio,ejercicio con pesas,ejercicio crunch,ejercicio con pelota,sauna vapor,sauna baja de peso,yoga para principiantes,yoga en pareja,yoga cerca de mi,yoga adelgaza,yoga al aire libre,yoga clases,yoga cerca,yoga con pelota,bicicleta de spinning,spinning gym,spinning intenso,spinning indoor cycling">
+    <meta name="description" content="En Body Factory estamos comprometidos contigo, en ayudarte a cumplir tus metas , con los mejores asesores y además, el mejor ambiente.">
+    <meta name="author" content="Kukulha.com">
+    <meta name="designer" content="Kukulha.com">
+
+    <!--SEO Facebook -->    
+    <meta property="og:title" content="Body Factory">
+    <meta property="og:description" content="En Body Factory estamos comprometidos contigo, en ayudarte a cumplir tus metas , con los mejores asesores y además, el mejor ambiente."> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http:gymbodyfactory.com">
+    <meta property="og:image" content="http://gymbodyfactory.com/img/logo.png">
+    <meta property=og:locale content="es_MX">
+
+    <!--SEO Twitter -->    
+    <meta property=twitter:card content="summary">
+    <meta property=twitter:title content="Body Factory">
+    <meta property=twitter:description content="En Body Factory estamos comprometidos contigo, en ayudarte a cumplir tus metas , con los mejores asesores y además, el mejor ambiente.">
+    <meta property=twitter:url content="http://gymbodyfactory.com.mx">
+
+    <!--Schema.org --> 
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "LocalBusiness",
+            "name": "Body Factory",
+            "url": "http://www.gymbodyfactory.com",
+            "image": "http://gymbodyfactory.com/img/logo.png",
+            "description" : "En Body Factory estamos comprometidos contigo, en ayudarte a cumplir tus metas , con los mejores asesores y además, el mejor ambiente.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tepatitlán",
+                "addressRegion": "MX-JAL",
+                "postalCode": "47600",
+                "streetAddress": "Av Jacarandas 517"
+            },
+            "telephone": "+52 3787015136",
+            "priceRange" : "$"
+        }
+    </script>   
+@endsection
+
 @section('content')
 <header>
     <div class="slider">
