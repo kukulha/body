@@ -109,7 +109,7 @@
                     </div> 
                 </div>
                 @empty
-                    <em class="white-text title">No hay articulos.</em>
+                    <em class="white-text title">No hay artículos.</em>
                 @endforelse
 
         </div>

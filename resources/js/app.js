@@ -7,6 +7,8 @@
 require('./bootstrap');
 require('materialize-css/dist/js/materialize.min');
 require('lightbox2/dist/js/lightbox.min');
+require('materialize-tags/dist/js/materialize-tags.min');
+require('corejs-typeahead/dist/typeahead.jquery.min');
 
 //General scripts
 $(document).ready(function(){

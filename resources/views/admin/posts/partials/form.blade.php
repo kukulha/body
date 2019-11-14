@@ -19,6 +19,16 @@
 			{{ Form::select('category_id', $categories) }}
 			{{ Form::label('category_id', 'Categoría') }}
 		</div>
+	
+
+		<div class="input-field">
+			{{ Form::label('tags','Tags') }}
+			@if($tags)
+				{{ Form::text('tags[]', $tags, ['data-role' => 'materialtags']) }}
+			@else
+				{{ Form::text('tags[]', null , ['data-role' => 'materialtags']) }}
+			@endif
+		</div>
 
 		<div class="input-field">
 			{{ Form::label('excerpt', 'Extracto') }}

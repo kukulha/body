@@ -31,9 +31,10 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   
+        $tags = [];
         $categories = Category::orderBy('name', 'DESC')->pluck('name', 'id');
-        return view('admin.posts.create', compact('categories'));
+        return view('admin.posts.create', compact('categories', 'tags'));
     }
 
     /**
@@ -44,6 +45,7 @@ class PostsController extends Controller
      */
     public function store(PostStoreRequest $request)
     {
+
         $post = Post::create(request()->all());
 
         if (request()->hasFile('file')) {
@@ -63,6 +65,9 @@ class PostsController extends Controller
             $post->save();
         }
 
+        //Guardar etiquetas
+        $post->syncTags($request->tags);
+
 
         return redirect()->route('posts.index')->with('info', 'Articulo creado correctamente');
     }
@@ -75,8 +80,9 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
+        $tags = $post->tags->pluck('name');
         $categories = Category::orderBy('name', 'DESC')->pluck('name', 'id');
-        return view('admin.posts.edit', compact('post', 'categories'));
+        return view('admin.posts.edit', compact('post', 'categories', 'tags'));
     }
 
     /**
@@ -106,6 +112,10 @@ class PostsController extends Controller
             $post->featured = $filename;
             $post->save();
         }
+
+        //Guardar etiquetas
+        $post->tags = [];
+        $post->syncTags($request->tags);
 
         return redirect()->route('posts.index')->with('info', 'Articulo editado correctamente');
     }

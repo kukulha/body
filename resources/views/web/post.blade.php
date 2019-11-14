@@ -10,6 +10,7 @@
 <main>
 	<article class="section container">
 		<p class="yellow-text light">Categoría: <span class="white-text">{{ $post->category->name }}</span></p>
+        <p class="yellow-text light">Etiquetas: @foreach($tags as $tag)<span class="chip">{{ $tag }}</span>   @endforeach</p>
 		<div class="divider yellow"></div>
 		<div class="white-text justify"><p>{!! $post->body !!}</p></div>
 	</article>

@@ -36,8 +36,10 @@
         "@ckeditor/ckeditor5-paragraph": "^15.0.0",
         "@ckeditor/ckeditor5-theme-lark": "^15.0.0",
         "ckeditor": "^4.12.1",
+        "corejs-typeahead": "^1.2.1",
         "lightbox2": "^2.11.1",
         "materialize-css": "^1.0.0",
+        "materialize-tags": "^1.2.3",
         "normalize.css": "^8.0.1"
     }
 }

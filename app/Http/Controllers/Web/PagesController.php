@@ -59,8 +59,8 @@ class PagesController extends Controller
     	$related= Post::where('category_id', '=', $post->category->id)
             ->where('id', '!=', $post->id)
             ->paginate(3);
-    	
-    	return view('web.post', compact('post', 'related'));
+    	$tags = $post->tags->pluck('name');
+    	return view('web.post', compact('post', 'related', 'tags'));
     }
 
 }
